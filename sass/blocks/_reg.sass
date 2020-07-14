@@ -1,0 +1,57 @@
+.reg
+    padding-top: 100px
+    margin-bottom: 40px
+    background-image: url(../img/registration/bg.jpg)
+    background-repeat: no-repeat
+    &__body
+        font-family: 'Averta Regular'
+        font-size: 25px
+        line-height: 25px
+        color: #FFFFFF
+        @media screen and ( max-width: 575px )
+            font-size: 20px
+            line-height: 22px
+            padding: 0 5px
+        & a 
+            text-decoration: none
+            color: #fff
+    &__title
+        font-family: 'Intro'
+        font-size: 45px
+        line-height: 45px
+        color: #fff
+        margin-bottom: 10px
+        @media screen and ( max-width: 575px )
+            font-size: 30px
+            line-height: 36px
+    &__button
+        font-family: 'Intro'
+        font-size: 25px
+        color: #fff 
+        padding: 30px 70px
+        border-radius: 10px
+        background: linear-gradient(to bottom, #7c9bd4, #8FC8E8, #7c9bd4)
+        animation: buttonIntro 2400s infinite linear
+        text-transform: uppercase
+        border: none
+        display: block
+        max-width: 475px
+        margin-top: 50px
+        @media screen and ( max-width: 575px )
+            width: 80%
+            text-align: center
+            display: block
+            margin: 0 auto
+            margin-top: 30px
+            padding: 20px 40px
+        &:hover
+            @media screen and ( min-width: 991px )
+                animation-play-state: paused
+    &-footer
+        margin-top: 100px
+.line
+    width: 60%
+    background: #FFFFFF
+    border-radius: 45px
+    height: 5px
+    margin: 20px 0

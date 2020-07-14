@@ -1,0 +1,238 @@
+.calc
+    padding: 40px 0
+    &__subtitle
+        font-family: 'Averta Regular'
+        font-size: 40px
+        line-height: 40px
+        color: #162F4B
+        margin: 60px 0
+        @media screen and ( max-width: 991px )
+            font-size: 32px
+            line-height: 36px
+        @media screen and ( max-width: 575px )
+            text-align: center
+            margin: 30px 0
+.form
+    &__span
+        font-family: 'Averta Regular'
+        font-size: 15px
+        color: #BFCAD5
+        position: absolute
+        background-color: #fff
+        transform: translateY(-50%)
+        left: 10%
+        padding: 0 10px
+        pointer-events: none
+    &__block
+        display: flex
+        justify-content: center
+        @media screen and ( max-width: 767px )
+            flex-direction: column
+        &:nth-of-type(1)
+            margin-bottom: 35px
+            @media screen and ( max-width: 991px )
+                margin-bottom: 40px
+    &__btn
+        display: block
+        margin: 0 auto
+        font-family: 'Intro'
+        font-size: 25px
+        line-height: 82%
+        padding: 30px 80px
+        color: #fff
+        background: linear-gradient(#D3E7FF, #B3D5FE, #D3E7FF)
+        background-position: 0 0
+        border-radius: 10px
+        border: none
+        animation: buttonIntro 1800s infinite linear
+        text-transform: uppercase
+        margin-top: 55px
+        @media screen and ( max-width: 575px )
+            padding: 30px 60px
+            font-size: 22px
+        &:hover
+            @media screen and ( min-width: 991px )
+                color: #fff
+                animation-play-state: paused
+        &:focus
+            outline: none
+    &__num
+        position: relative
+        &:nth-of-type(1)
+            margin-right: 70px
+            @media screen and ( max-width: 767px )
+                margin-right: 0
+                margin-bottom: 40px
+        & label
+            font-family: 'Averta Regular'
+            font-size: 15px
+            color: #D6DEE4
+            position: absolute
+            bottom: -4px
+            @media screen and ( max-width: 991px )
+                bottom: -20px
+            @media screen and ( max-width: 767px )
+                bottom: 0px
+            &:nth-of-type(1)
+                left: 10px
+                @media screen and ( max-width: 767px )
+                    left: 20px
+            &:nth-of-type(2)
+                right: 5px
+                @media screen and ( max-width: 767px )
+                    right: 20px
+        &_second
+            & label:nth-of-type(1)
+                left: -3px
+            & label:nth-of-type(2)
+                right: -9px
+    &__select
+        position: relative
+        width: 400px
+        @media screen and ( max-width: 991px )
+            width: 300px
+        @media screen and ( max-width: 767px )
+            width: 100%
+        &:nth-of-type(1)
+            margin-right: 70px
+        & select
+            background-color: transparent
+            color: #52606D
+            border: 3px solid #BBC6D0
+            border-radius: 5px
+            padding-left: 25px
+            width: 400px
+            height: 70px
+            font-size: 20px
+            line-height: 25px
+            font-family: 'Averta Regular'
+            appearance: none
+            outline: none
+            cursor: pointer
+            transition: 0.3s
+            @media screen and ( max-width: 991px )
+                width: 300px
+            @media screen and ( max-width: 767px )
+                width: 100%
+            & option
+                color: #52606D
+                background-color: #BBC6D0
+            &:hover
+                @media screen and ( min-width: 991px )
+                    border: 3px solid #7d91a5
+            &:focus
+                border: 3px solid #52606D
+        &::after
+            content: ''
+            background-image: url(../img/calc/arrow-down.svg)
+            background-repeat: no-repeat
+            background-position: center center
+            position: absolute
+            top: 0
+            right: 0
+            width: 70px
+            height: 70px
+            background-color: transparent
+            pointer-events: none
+            transition: 0.3s
+        &.active::after
+            @media screen and ( min-width: 991px )
+                transform: rotate(180deg)
+    &__input
+        background-color: transparent
+        color: #52606D
+        border: 3px solid #BBC6D0
+        border-radius: 5px
+        padding-left: 25px
+        width: 400px
+        height: 70px
+        font-size: 20px
+        line-height: 25px
+        font-family: 'Averta Regular'
+        outline: none
+        transition: 0.3s
+        @media screen and ( max-width: 991px )
+            width: 300px
+        @media screen and ( max-width: 767px )
+            width: 100%
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button
+            appearance: none
+        &:hover
+            border: 3px solid #7d91a5
+        &:focus
+            border: 3px solid #52606D   
+        &:invalid
+            border: 3px solid #ff6c6c
+    &__range
+        appearance: none
+        width: 65%
+        background-color: transparent
+        display: block
+        margin: 0 auto
+        margin-top: 25px
+        @media screen and ( max-width: 767px )
+            margin-bottom: 25px
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            height: 17px
+            width: 17px
+            border-radius: 50%
+            background: #83C4FF
+            cursor: pointer
+            margin-top: -9px
+            transition: 0.1s
+            border: 0px solid #fff
+            &:hover
+                @media screen and ( min-width: 991px )
+                    border: 2px solid #fff
+        &::-moz-range-thumb
+            height: 17px
+            width: 17px
+            border-radius: 50%
+            background: #83C4FF
+            cursor: pointer
+        &::-ms-thumb
+            height: 17px
+            width: 17px
+            border-radius: 50%
+            background: #83C4FF
+            cursor: pointer
+        &::-webkit-slider-runnable-track
+            width: 100%
+            height: 0px
+            cursor: pointer
+            background: #83C4FF
+            border-radius: 5px
+            border: 2px solid #83C4FF
+        &::-moz-range-track
+            width: 100%
+            height: 0px
+            cursor: pointer
+            background: #83C4FF
+            border-radius: 5px
+            border: 2px solid #83C4FF
+        &:focus
+            outline: none
+        &:focus::-webkit-slider-runnable-track
+            background: #83C4FF
+        &::-ms-track
+            width: 100%
+            cursor: pointer
+            background: transparent
+            border-color: transparent
+            color: transparent
+            height: 0
+            border: 2px solid #83C4FF
+        &::-ms-fill-lower
+            background: #83C4FF
+            border: 2px solid #83C4FF
+            border-radius: 5px
+        &:focus::-ms-fill-lower
+            background: #83C4FF
+        &::-ms-fill-upper
+            background: #83C4FF
+            border: 2px solid #83C4FF
+            border-radius: 5px
+        &:focus::-ms-fill-upper
+            background: #83C4FF

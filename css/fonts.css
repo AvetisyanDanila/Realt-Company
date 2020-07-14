@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Intro';
+  src: url("../fonts/Intro.woff") format("woff");
+  src: url("../fonts/Intro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Averta Regular';
+  src: url("../fonts/avertaRegular.woff") format("woff");
+  src: url("../fonts/avertaRegular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Averta Bold';
+  src: url("../fonts/avertaBold.woff") format("woff");
+  src: url("../fonts/avertaBold.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+/*# sourceMappingURL=fonts.css.map */

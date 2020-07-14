@@ -1,0 +1,108 @@
+.about
+    padding: 40px 0
+    &__title
+        margin-bottom: 50px
+    &__body
+        display: flex
+        align-items: center
+        @media screen and ( max-width: 991px )
+            flex-direction: column
+        & img
+            margin-right: 22px
+            @media screen and ( max-width: 991px )
+                margin-right: 0
+                margin-bottom: 20px
+            @media screen and ( max-width: 575px )
+                display: none
+    &__img
+        width: 600px
+        height: 650px
+        border-radius: 41px
+        @media screen and ( max-width: 1199px )
+            width: 500px
+            height: 550px
+        @media screen and ( max-width: 991px )
+            width: 60%
+            height: 400px
+    &__text
+        font-family: 'Averta Regular'
+        font-size: 25px
+        line-height: 32px
+        color: #000000
+        @media ( min-width:  1600px)
+            font-size: 30px
+            line-height: 37px
+        @media screen and ( max-width: 1199px )
+            font-size: 20px
+            line-height: 32px
+        @media screen and ( max-width: 991px )
+            text-align: center
+        &:first-child
+            margin-bottom: 20px
+        &:nth-of-type(2)
+            margin-bottom: 20px
+            @media screen and ( max-width: 991px )
+                display: block
+                margin: 0 auto
+                margin-bottom: 20px
+    &__content
+        display: flex
+        flex-direction: column
+        align-items: start
+    & a 
+        text-decoration: none
+        outline: none
+    &__link
+        margin-bottom: 50px
+    &__socials
+        width: 187px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-left: 15px
+        @media screen and ( max-width: 991px )
+            width: 100%
+            justify-content: center
+        @media screen and ( max-width: 575px )
+            width: 310px
+            margin: 0 auto
+            justify-content: space-around
+        & img
+            margin: 0
+            transition: 0.3s
+            @media screen and ( max-width: 991px )
+                margin-right: 50px
+                margin-top: 30px
+            @media screen and ( max-width: 575px )
+                margin-right: 0
+            @media screen and ( min-width: 991px )
+                &:hover
+                    transform: scale(1.1)
+.link
+    font-family: 'Intro'
+    font-size: 30px
+    line-height: 30px
+    color: #fff
+    background: linear-gradient(to bottom, #7c9bd4, #8FC8E8, #7c9bd4)
+    background-position: 0 0
+    border-radius: 42px
+    padding: 30px 90px
+    border: none
+    animation: buttonIntro 1800s infinite linear
+    text-transform: uppercase
+    @media ( min-width:  1600px)
+        padding: 30px 120px
+    @media screen and ( max-width: 1199px )
+        padding: 20px 40px
+        font-size: 24px
+        line-height: 32px
+    @media screen and ( max-width: 991px )
+        display: inline-block
+        margin: 0 auto
+    @media screen and ( max-width: 767px )
+        font-size: 20px
+        line-height: 30px
+    &:hover
+        @media screen and ( min-width: 991px )
+            color: #fff
+            animation-play-state: paused

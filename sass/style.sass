@@ -1,0 +1,50 @@
+@import 'fonts.sass'
+@import 'blocks/_header.sass'
+@import 'blocks/_intro.sass'
+@import 'blocks/_about.sass'
+@import 'blocks/_property.sass'
+@import 'blocks/_calc.sass'
+@import 'blocks/_mortgage.sass'
+@import 'blocks/_parallax.sass'
+@import 'blocks/_work.sass'
+@import 'blocks/_footer.sass'
+@import 'blocks/_popup.sass'
+@import 'blocks/_reg.sass'
+@import 'blocks/_reviews.sass'
+
+.title
+    font-family: 'Intro'
+    font-size: 36px
+    line-height: 42px
+    text-align: center
+    color: #162F4B
+    @media ( min-width:  1600px)
+        font-size: 50px
+        line-height: 50px
+    @media screen and ( max-width: 991px )
+        font-size: 28px
+        line-height: 32px
+    @media screen and ( max-width: 575px )
+        font-size: 24px
+        line-height: 28px
+    &_short
+        &:after
+            content: ''
+            display: block
+            width: 10%!important
+            height: 5px
+            margin: 0 auto
+            background-color: #162F4B
+            margin-top: 10px
+            @media ( min-width:  1600px)
+                width: 15%
+    &::after
+        content: ''
+        display: block
+        width: 40%
+        height: 5px
+        margin: 0 auto
+        background-color: #162F4B
+        margin-top: 10px
+        @media ( min-width:  1600px)
+            width: 45%

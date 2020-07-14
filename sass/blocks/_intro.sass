@@ -1,0 +1,94 @@
+.intro
+    background-image: url(../img/intro/intro-bg.jpg)
+    background-size: cover
+    padding: 130px 0 50px 0
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    &__body
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        & a 
+            text-decoration: none
+            outline: none
+    &__title
+        font-family: 'Intro'
+        font-size: 45px
+        line-height: 45px
+        text-align: center
+        color: #fff
+        max-width: 725px
+        text-transform: uppercase
+        margin-bottom: 15px
+        @media ( min-width:  1600px)
+            font-size: 55px
+            line-height: 55px
+        @media screen and ( max-width: 991px )
+            font-size: 38px
+            line-height: 42px
+        @media screen and ( max-width: 767px )
+            font-size: 32px
+            line-height: 36px
+        @media screen and ( max-width: 575px )
+            font-size: 24px
+            line-height: 32px
+    &__text
+        font-family: 'Averta Regular'
+        font-size: 25px
+        line-height: 33px
+        text-align: center
+        color: #fff
+        max-width: 400px
+        margin-bottom: 60px
+        @media ( min-width:  1600px)
+            font-size: 35px
+            line-height: 43px
+            max-width: 600px
+        @media screen and ( max-width: 991px )
+            font-size: 22px
+            line-height: 30px
+            margin-bottom: 20px
+        @media screen and ( max-width: 767px )
+            font-size: 18px
+            line-height: 26px
+    &__link
+        font-family: 'Intro'
+        font-size: 30px
+        line-height: 30px
+        color: #fff
+        background: linear-gradient(to bottom, #7c9bd4, #8FC8E8, #7c9bd4)
+        background-position: 0 0
+        border-radius: 42px
+        border: none
+        padding: 30px 90px
+        animation: buttonIntro 1800s infinite linear
+        text-transform: uppercase
+        @media screen and ( max-width: 991px )
+            padding: 30px 60px
+        @media screen and ( max-width: 767px )
+            padding: 20px 40px
+            font-size: 20px
+            line-height: 25px
+        &:hover
+            @media screen and ( min-width: 991px )
+                color: #fff
+                animation-play-state: paused
+    &__arrow
+        animation: arrowIntro 1.5s infinite
+        position: absolute
+        bottom: 15px
+        @media screen and ( max-width: 575px )
+            display: none
+@keyframes arrowIntro
+    0%, 100%
+        transform: translateY(10px)
+    50%
+        transform: translateY(0px)
+@keyframes buttonIntro
+    0%
+        background-position: 0 0
+    100%
+        background-position: 0px 100000px

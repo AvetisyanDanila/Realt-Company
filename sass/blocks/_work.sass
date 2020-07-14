@@ -1,0 +1,86 @@
+.work
+    padding: 40px 0 100px 0
+    background-image: url(../img/work/work-bg.jpg)
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    @media screen and ( max-width: 991px )
+        background-size: cover
+    & a 
+        text-decoration: none
+        outline: none
+        color: #fff
+        cursor: pointer
+        &:hover
+            color: #fff
+    &__title
+        margin-bottom: 40px
+    &__subtitle
+        font-family: 'Averta Bold'
+        font-size: 30px
+        line-height: 30px
+        color: #000
+        margin-bottom: 5px
+        @media screen and ( max-width: 991px )
+            font-size: 24px
+            line-height: 28px
+        @media screen and ( max-width: 575px )
+            font-size: 20px
+            line-height: 24px
+        &_bold
+            font-family: 'Intro'
+    &__list
+        font-family: 'Averta Regular'
+        font-size: 25px
+        line-height: 30px
+        color: #000
+        @media screen and ( max-width: 991px )
+            font-size: 22px
+            line-height: 26px
+        @media screen and ( max-width: 575px )
+            font-size: 20px
+            line-height: 22px
+    &-vacancy
+        padding-top: 35px
+        margin-bottom: 75px
+        &__title
+            font-family: 'Averta Regular'
+            font-size: 40px
+            line-height: 40px
+            color: #162F4B
+            @media screen and ( max-width: 991px )
+                font-size: 32px
+                line-height: 36px
+        &__list
+            padding-top: 30px
+        &__item
+            font-family: 'Averta Regular'
+            font-size: 25px
+            line-height: 35px 
+            color: #000
+            position: relative
+            padding-left: 50px
+            margin-bottom: 15px
+            @media screen and ( max-width: 991px )
+                font-size: 22px
+            &::before
+                content: ''
+                position: absolute
+                left: 0
+                width: 31px
+                height: 39px
+                background-image: url(../img/work/arrow-right.svg)
+                animation: moveToLeft 2.5s infinite
+                @media screen and ( max-width: 991px )
+                    width: 26px
+                    height: 34px
+                    background-size: 100% 100%
+    &__link
+        @media screen and ( max-width: 575px )
+            display: block
+            width: 280px
+            margin: 0 auto
+@keyframes moveToLeft
+    0%,100%
+        transform: translateX(0px)
+    50%
+        transform: translateX(10px)

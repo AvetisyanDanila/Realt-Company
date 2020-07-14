@@ -1,0 +1,193 @@
+.header
+    background-color: rgba(0, 0, 0, 0.5)
+    padding: 10px 0
+    position: fixed
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 10
+    @media screen and ( max-width: 575px )
+        padding: 10px
+    & a 
+        text-decoration: none
+        outline: none
+        cursor: pointer
+    &__body
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__burger
+        @media screen and ( max-width: 992px )
+            display: block
+            position: relative
+            width: 30px
+            height: 20px
+            z-index: 2
+            &::before, &::after
+                content: ''
+                position: absolute
+                background-color: #7c9bd4
+                width: 100%
+                height: 3px
+                left: 0
+                transition: 0.3s
+            &::before
+                top: 0
+            &::after
+                bottom: 0
+            & span 
+                position: absolute
+                background-color: #7c9bd4
+                left: 0
+                width: 100%
+                height: 3px
+                top: 9px
+                transition: 0.3s
+            &.active::before
+                transform: rotate(45deg)
+                top: 3px
+                width: 60%
+                left: 9px
+                background-color: #fff
+            &.active::after
+                transform: rotate(-45deg)
+                bottom: 3px
+                width: 60%
+                left: 9px
+                background-color: #fff
+            &.active span
+                width: 130%
+                left: -50%
+                background-color: #fff
+    .menu
+        @media screen and ( max-width: 992px )
+            position: fixed
+            right: -100%
+            top: 0
+            width: 100%
+            height: 100%
+            background-color: #7c9bd4
+            padding-top: 70px
+            overflow: auto
+            transition: 0.3s
+            margin-top: 0
+            &.active
+                right: 0
+        &__list
+            display: flex
+            @media screen and ( max-width: 992px )
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                height: 100%
+        &__item
+            margin-right: 48px
+            @media screen and ( max-width: 768px )
+                margin-right: 0
+                margin-bottom: 30px
+            &:last-child
+                margin-right: 0
+        &__link
+            font-family: 'Averta Regular'
+            font-size: 20px
+            line-height: 25px
+            color: #fff
+            text-decoration: none
+            outline: none
+            @media screen and ( max-width: 992px )
+                font-size: 22px
+                text-transform: uppercase
+            &::after
+                content: ''
+                display: block
+                height: 2px
+                transform: scale(0)
+                background-color: #fff
+                transition: 0.3s
+            &:hover::after
+                transform: scale(1)
+            &_active
+                &::after
+                    content: ''
+                    display: block
+                    height: 2px
+                    transform: scale(1)
+                    background-color: #fff
+                    transition: 0.3s
+    &__button
+        display: block
+        background-color: transparent
+        border: 2px solid #fff
+        border-radius: 64px
+        padding: 14px
+        font-family: 'Averta Bold'
+        font-size: 20px
+        line-height: 25px
+        transition: 0.35s
+        position: relative
+        color: #fff!important
+        @media screen and ( max-width: 992px )
+            display: none
+        & span
+            display: block
+        &:hover
+            color: #5D91DD!important
+        &:hover span
+            animation: phone 0.7s infinite linear
+        &::after
+            content: ''
+            position: absolute
+            width: 101%
+            left: -1px
+            bottom: 0
+            background-color: #fff
+            border-bottom-left-radius: 64px
+            border-bottom-right-radius: 64px
+            height: 50%
+            transition: 0.3s
+            z-index: -1
+            transform: scaleX(0)
+        &::before
+            content: ''
+            position: absolute
+            width: 101%
+            height: 50%
+            left: -1px
+            top: 0
+            background-color: #fff
+            border-top-left-radius: 64px
+            border-top-right-radius: 64px
+            transition: 0.3s
+            z-index: -1
+            transform: scaleX(0)
+        &:hover::before
+            height: 50%
+            transform: scaleX(1)
+        &:hover::after
+            height: 50%
+            transform: scaleX(1)
+@keyframes phone
+    0%
+        transform: rotate(-2deg)
+    15%
+        transform: rotate(2deg)
+    25%
+        transform: rotate(-2deg)
+    35%
+        transform: rotate(2deg)
+    45%
+        transform: rotate(-2deg)
+    55%
+        transform: rotate(2deg)
+    65%
+        transform: rotate(-2deg)
+    75%
+        transform: rotate(2deg)
+    85%
+        transform: rotate(-2deg)
+    100%
+        transform: rotate(2deg)
+.logo img
+    @media screen and ( max-width: 991px )
+        width: 100px
+        height: 40px
